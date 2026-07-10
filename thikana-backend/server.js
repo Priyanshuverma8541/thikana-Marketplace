@@ -12,7 +12,10 @@ connectDB();
 // CORS - explicit allowlist, not a wildcard
 const allowedOrigins = [
   process.env.FRONTEND_URL || 'http://localhost:5173',
-  process.env.ADMIN_URL || 'http://localhost:5174'
+  process.env.ADMIN_URL || 'http://localhost:5174', 
+  // Production (Vercel)
+  "https://thikana-marketplace.vercel.app",
+  "https://thikana-marketplace-vvqt.vercel.app",
 ];
 app.use(
   cors({
